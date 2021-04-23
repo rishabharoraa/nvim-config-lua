@@ -1,0 +1,86 @@
+lua require 'init'
+
+call plug#begin('~/.config/nvim/plugged')
+	Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
+
+    Plug 'morhetz/gruvbox'
+call plug#end()
+
+syntax on
+set encoding=utf-8
+set number
+
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4    " number of spaces to use for autoindent
+set expandtab       " tabs are space
+set autoindent
+set copyindent      " copy indent from the previous line
+
+set hidden
+set number                   " show line number
+set showcmd                  " show command in bottom bar
+"set cursorline               " highlight current line
+set cursorline
+set wildmenu                 " visual autocomplete for command menu
+set showmatch                " highlight matching brace
+set laststatus=2             " window will always have a status line
+set nobackup
+set noswapfile
+
+
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matche
+set ignorecase      " ignore case when searching
+set smartcase       " ignore case if search pattern is lower case
+
+" colors
+colorscheme gruvbox
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+hi cursorline cterm=NONE ctermbg=darkgray
+
+" c++ syntax highlighting
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+
+" air-line
+let g:airline_theme = 'zenburn'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
