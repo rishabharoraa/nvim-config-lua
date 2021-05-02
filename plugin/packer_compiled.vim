@@ -83,13 +83,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rishabh/.local/share/nvim/site/pack/packer/start/indentLine"
   },
-  ["nvim-treesitter"] = {
+  ["nvcode-color-schemes.vim"] = {
     loaded = true,
-    path = "/home/rishabh/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  oak = {
-    loaded = true,
-    path = "/home/rishabh/.local/share/nvim/site/pack/packer/start/oak"
+    path = "/home/rishabh/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
   },
   ["packer.nvim"] = {
     loaded = true,

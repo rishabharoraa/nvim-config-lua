@@ -16,10 +16,12 @@ return require('packer').startup(function()
     use 'christianchiarulli/nvcode-color-schemes.vim'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    use 'Yggdroot/indentLine'
-
+    --use 'Yggdroot/indentLine'
+   
+    use 'ryanoasis/vim-devicons'
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'kyazdani42/nvim-web-devicons'
     use {'neoclide/coc.nvim' , branch = 'release'}
-    use {'nvim-treesitter/nvim-treesitter' , run = ':TSUpdate'}
-    --use 'jackguo380/vim-lsp-cxx-highlight'
     use 'jiangmiao/auto-pairs'
+
 end)
