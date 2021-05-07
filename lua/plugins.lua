@@ -23,5 +23,6 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use {'neoclide/coc.nvim' , branch = 'release'}
     use 'jiangmiao/auto-pairs'
+    use 'ishan9299/nvim-solarized-lua'
 
 end)

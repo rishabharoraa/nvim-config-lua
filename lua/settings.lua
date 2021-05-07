@@ -14,14 +14,17 @@ vim.wo.cursorline = true
 
 --colorscheme
 vim.cmd('let g:nvcode_termcolors=256')
+vim.cmd('set t_8f=^[[38;2;%lu;%lu;%lum')
+vim.cmd('set t_8b=^[[48;2;%lu;%lu;%lum')
+vim.cmd([[set termguicolors]])
 vim.cmd('syntax on')
 vim.cmd('colorscheme nvcode')
---vim.cmd('hi LineNr ctermbg=NONE guibg=NONE')
+vim.cmd('hi LineNr ctermbg=NONE guibg=NONE')
 
 vim.cmd('set ts=4')
 vim.cmd('set sw=4')
---vim.cmd('highlight Normal ctermbg=none')
---vim.cmd('highlight NonText ctermbg=none')
+vim.cmd('highlight Normal ctermbg=none')
+vim.cmd('highlight NonText ctermbg=none')
 vim.cmd('hi cursorline cterm=NONE ctermbg=236')
 
 -- vim-airline settings
@@ -66,3 +69,5 @@ vim.api.nvim_command('augroup CursorBullshit')
 vim.api.nvim_command('autocmd!')
 vim.api.nvim_command('autocmd VimLeave * set guicursor=a:ver100')
 vim.api.nvim_command('augroup END')
+
+vim.cmd('colorscheme solarized-high')
